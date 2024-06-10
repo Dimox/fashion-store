@@ -7,7 +7,7 @@ import ShoppingCart from './pages/ShoppingCart.vue'
 import Checkout from './pages/Checkout.vue'
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
