@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Sora;
+  font-style: normal;
+  font-weight: 100 800;
+  src: url('../fonts/Sora-Variable.woff2') format('woff2 supports variations'),
+    url('../fonts/Sora-Variable.woff2') format('woff2-variations');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Volkhov;
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Volkhov-Regular.woff2') format('woff2');
+  font-display: swap;
+}
