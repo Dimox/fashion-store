@@ -5,7 +5,7 @@ import { run } from 'vite-plugin-run'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './',
+  base: '/fashion-store/',
   plugins: [
     run([
       {
