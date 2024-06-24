@@ -27,7 +27,6 @@
 import { onMounted, ref } from 'vue'
 import { register, SwiperContainer } from 'swiper/element'
 import { EffectCreative } from 'swiper/modules'
-import effectCreativeCSS from '/node_modules/swiper/modules/effect-creative-element.css?url'
 import TestimonialCard from './TestimonialCard.vue'
 import Icon from './Icon.vue'
 import { Testimonial } from '@/types'
@@ -51,7 +50,6 @@ const params = {
   rewind: true,
   speed: 400,
   initialSlide: 1,
-  injectStylesUrls: [effectCreativeCSS],
   effect: 'creative',
   creativeEffect: {
     prev: {
