@@ -6,19 +6,23 @@ export const useCartStore = defineStore('cart', () => {
   const storage = localStorage.getItem('fashion-store-cart')
   const state = ref<CartItem[]>(storage ? (JSON.parse(storage) as CartItem[]) : [])
 
+  const saveToLocalStorage = () => {
+    localStorage.setItem('fashion-store-cart', JSON.stringify(state.value))
+  }
+
   const addItem = (id: number, quantity: number) => {
     state.value.push({ id, quantity })
-    localStorage.setItem('fashion-store-cart', JSON.stringify(state.value))
+    saveToLocalStorage()
   }
 
   const removeItem = (id: number) => {
     state.value = state.value.filter(item => item.id !== id)
-    localStorage.setItem('fashion-store-cart', JSON.stringify(state.value))
+    saveToLocalStorage()
   }
 
   const updateItem = (id: number, quantity: number) => {
     state.value = state.value.map(item => (item.id === id ? { ...item, quantity } : item))
-    localStorage.setItem('fashion-store-cart', JSON.stringify(state.value))
+    saveToLocalStorage()
   }
 
   return { state, addItem, removeItem, updateItem }
